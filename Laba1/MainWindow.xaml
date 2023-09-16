@@ -1,0 +1,44 @@
+﻿<Window x:Class="Laba1.MainWindow"
+        Name="Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laba1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Name="GridMain">
+        <Grid Name="GridButtons" VerticalAlignment="Top" Height="50">
+            <Image Name="CBMuteUnmute"  Width="50" Source="Image/volume-up.png" HorizontalAlignment="Left" Margin="10 0 0 0"/>
+            <Button Name="BTLevelOne" Width="50" HorizontalAlignment="Left" Margin="70 0 0 0" FontSize="15" Click="BTLevelOne_Click" >Level1</Button>
+            <Button Name="BTLevelTwo" Width="50" HorizontalAlignment="Left" Margin="130 0 0 0" FontSize="15" Click="BTLevelTwo_OnClick" >Level2</Button>
+            <Button Name="BTLevelThree" Width="50" HorizontalAlignment="Left" Margin="190 0 0 0" FontSize="15" Click="BTLevelThree_OnClick" >Level3</Button>
+            <Button Name="BTRestart" Width="50" HorizontalAlignment="Left" Margin="250 0 0 0" FontSize="15" Click="BTRestart_OnClick" >Restart</Button>
+        </Grid>
+        <Grid Name="GridGame" Margin="0,50,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <MediaElement Name="MediaPlayer" LoadedBehavior="Manual" Grid.Row="0" Grid.Column="0" Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Grid Name="GridQuestion" VerticalAlignment="Top" Height="100" Grid.ColumnSpan="2">
+                <Label Name="LbQuestion" FontSize="27" VerticalAlignment="Center" HorizontalAlignment="Right">Вибери правильну відповідь</Label>
+            </Grid>
+            <Grid Name="BtQuestion" VerticalAlignment="Top" Height="280" Margin="0,-88,0,0" Grid.ColumnSpan="2"/>
+            <Grid Name="GridButto" Margin="0,192,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
